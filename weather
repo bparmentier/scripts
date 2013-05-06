@@ -9,7 +9,7 @@ location=Brussels
 var_url="https://www.google.com/ig/api?weather=$location&hl=en&referrer=googlecalendar"
 
 var_weather_wget=`wget -q $var_url -O -`
-var_weather_xml=`echo "$var_weather_wget" | sed 's/<forecast_conditions>.*//'`
+var_weather_xml=`echo "$var_weather_wget" | sed 's/<current_conditions>.*//'`
 var_weather=`echo "$var_weather_xml" | sed 's/></>\n</g'`
 
 #var_date=`echo "$var_weather" | grep -e '<forecast_date' | \
