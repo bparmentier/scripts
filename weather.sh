@@ -40,4 +40,6 @@ sed -e 's/<temp_c data="//' -e 's/"\/>//'`
 var_day=$(LC_TIME=en_US date +"%A")
 var_time=$(LC_TIME=en_US date +"%H:%M")
 
-echo "Hello Master. It is time to wake up. We are $var_day and it is $var_time. It is $var_temp_c degrees outside and the weather is $var_condition. Have a nice day and may the force be with you!"
+echo "Hello Master. It is time to wake up. We are $var_day and it is $var_time."
+echo "It is $var_temp_c degrees outside and the weather is $var_condition."
+echo "Have a nice day and may the force be with you!"
